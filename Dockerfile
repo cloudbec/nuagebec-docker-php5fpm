@@ -2,7 +2,7 @@ FROM nuagebec/ubuntu:14.04
 MAINTAINER David Tremblay <david@nuagebec.ca>
 
 #install php5fpm
-RUN apt-get update && apt-get upgrade && \
+RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y php5-fpm php5-mysql php5-gd supervisor && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
